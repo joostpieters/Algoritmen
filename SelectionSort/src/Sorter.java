@@ -1,7 +1,7 @@
 /**
  * A class that sorts a given array with the selection sort Algorithm. This
  * class also provides a method to return the number of compares this algorithm
- * has made and a method to increase the number of comapers by one.
+ * has made and a method to increase the number of comaperes by one.
  * 
  * 
  * @author Yanice Slegers
