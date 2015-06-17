@@ -7,7 +7,7 @@
  * @author Yanice Slegers
  *
  */
-public class Sorter {
+public class SelectionSorter {
 	/**
 	 * The number of compares this algorithm has made.
 	 */
@@ -15,6 +15,7 @@ public class Sorter {
 	/**
 	 * The array that needs to be sorted.
 	 */
+	@SuppressWarnings("rawtypes")
 	private Comparable[] rij;
 
 	/**
@@ -24,7 +25,7 @@ public class Sorter {
 	 * @param rij
 	 *            The row that needs to be sorted
 	 */
-	public Sorter(Comparable[] rij) {
+	public SelectionSorter(@SuppressWarnings("rawtypes") Comparable[] rij) {
 		this.rij = rij;
 	}
 
@@ -50,6 +51,7 @@ public class Sorter {
 	 * @param b
 	 *            The second index that needs to be switched.
 	 */
+	@SuppressWarnings("rawtypes")
 	public void switchPlace(int a, int b) {
 		Comparable temp = rij[a];
 		rij[a] = rij[b];
@@ -62,6 +64,7 @@ public class Sorter {
 	 * @return True if and only if each value of this row is lesser than the
 	 *         value of the next index of this array.
 	 */
+	@SuppressWarnings("unchecked")
 	public boolean isSorted() {
 		for (int i = 0; i < rij.length - 1; i++) {
 			if (rij[i].compareTo(rij[i + 1]) > 0) {
@@ -95,6 +98,7 @@ public class Sorter {
 	 * @return	True if and only if the element if the first index is less than the ellemant of the second index.
 	 * 
 	 */
+	@SuppressWarnings("unchecked")
 	public boolean isLess(int i,int j){
 		return rij[i].compareTo(rij[j]) < 0;
 	}

@@ -6,7 +6,6 @@ import org.junit.Test;
 
 public class TestSorter {
 	
-	
 	/**
 	 * The number of compares should be equal for every array with the same length.
 	 */
