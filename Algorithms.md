@@ -18,6 +18,7 @@ Drie zal worden vergeleken met vier en daarna worden gewisseld met vier.
 twee zal worden vergeleken met vier en daarna met drie. vier wordt verwisseld met twee en drie wordt ook verwisseld met de 2.
 
 | 3 | 2 | 4 | 1 |
+
 | 2 | 3 | 4 | 1 |
 
 Hieruit kunnen we afleiden dat de het aantal vergelijkingen dat dit sorteeralgorithme maakt in zijn worst case gelijk is aan 1 + 2 + ... + (n-1). Wiskundig gezien is dit gelijk aan n*(n-1)/2 waarbij n staat voor de lengte van de rij.
