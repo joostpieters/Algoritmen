@@ -1,4 +1,7 @@
 package gna;
+
+import java.awt.color.CMMException;
+
 /**
  * A class that provides a method to sort a given array with the insertion sort algorithm.
  * The class provides also a method to calculate the number of swaps and the number of compares 
@@ -22,6 +25,9 @@ public class InsertionSorter {
 	 */
 	@SuppressWarnings("rawtypes")
 	private Comparable[] rij;
+	public InsertionSorter(Comparable[] array) {
+		this.rij = array;
+	}
 	
 	/**
 	 * Return the number of compares this algorithm has done.
@@ -102,6 +108,48 @@ public class InsertionSorter {
 		}
 		return true;
 	}
+	/**
+	 * The bad thing about this algorithm is that is has to many compares.
+	 * i will decrease till the array is partionaly sorted. Then it will increase till i is equal to the index of the new element that needs to be sorted.
+	 * I will decrease than again and so further on and further on.
+	 */
+	public void sort_badImpl(){
+		for(int i = 1; i < rij.length; i++){
+			int j = i;
+			inCreaseNumbCompares();
+			while(j != 0 && isLess(i, j-1)){
+				IncreaseSwaps();
+				switchPlace(i, j-1);
+				i--;
+				j--;
+			}
+		}
+	}
+	/**
+	 * Sorts the array of this class with the insertion sort algorithm.
+	 */
+	public void sort(){
+		for(int i = 1; i < rij.length; i++){
+			int j = i;
+			int ind = i;
+			inCreaseNumbCompares();
+			while(j != 0 && isLess(i, j-1)){
+				switchPlace(ind, j-1);
+				ind--;
+				j--;
+			}
+		}
+	}
 	
-	
+	public static void main(String[] args) {
+		Comparable[] e = {6,9,8,7,6,4,5,4,3,15,2,1};
+		InsertionSorter s = new InsertionSorter(e);
+		s.sort_badImpl();
+		System.out.println(s.getNumbCompares());
+		s.showArray();
+		
+		InsertionSorter s2 = new InsertionSorter(e);
+		s2.sort();
+		System.out.println(s2.getNumbCompares());
+	}
 }
