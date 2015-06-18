@@ -1,3 +1,22 @@
+# Selection sort 
+Selection sort sorteert een rij aan de hand van de volgende methode:
+
+Het zoekt in de ongesorteerde rij naar het kleinste element. Wanneer het kleinste element gevonden is verplaast men dit kleinste element naar de eerste positie van de ongesorteerde rij. De ongesorteerde rij wordt nu verkleint. 
+Voorbeeld: 
+| 2 | 4 | 3 | 1 |
+Heel de rij is ongesorteerd. De ganse rij wordt overlopen en één komt uit als het kleinste element.
+Het kleinste element wordt vervolgens gewisseld met het eerste element van de ongesorteerde rij.
+| 1 | 4 | 3 | 2 |
+
+De ongesorteerde rij wordt nu verkleint. Ze bestaat enkel nog maar uit de laatste drie elementen.
+De gesorteerde rij is logischer wijs ook vergroot. Die rij bestaat nu uit het eerste element. Dit wordt telke malen herhaald tot wanneer de hele rij is gesorteerd.
+
+## Best case = worst Case
+Bij selection sort kan men niet echt spreken van een best of een worst case. Ieder element (van de ongesorteerde rij)  wordt immers vergeleken met elk ander element van de ongesorteerde rij. 
+Het eerste element zal dus N-1 vergelijkingen maken. (Met N de lengte van de rij.) Het tweede N-2, ... Zo komen we aan de som (N-1) + (N-2) + ... + 1. Dit is gelijk aan N*(N-1)/2.  
+
+
+
 # Insertion sort
 Insertion sort is een sorteeralgorithme dat een rij sorteert aan de hand van de volgende werkwijze.
 
