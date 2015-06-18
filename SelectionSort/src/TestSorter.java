@@ -1,6 +1,4 @@
 import static org.junit.Assert.*;
-
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 
@@ -16,20 +14,13 @@ public class TestSorter {
 		// We create a "worst case" array that is sorted in the opposite direction. 
 		Comparable[] rij2 = {9,8,7,6,5,4,3,2,1};
 		//We create the two sorters
-		Sorter s = new Sorter(rij);
-		Sorter s2 = new Sorter(rij2);
+		SelectionSorter s = new SelectionSorter(rij);
+		SelectionSorter s2 = new SelectionSorter(rij2);
 		// We sort the array.
 		s.sort();
 		s2.sort();
 		//We check if the number of compares is good
 		assertTrue(s.getComparers() == s2.getComparers());
 	}
-	/**
-	 * Test if a fully correctly sorted array make any swaps.
-	 */
-	@Test
-	public void test_swaps(){
-		
-	}
-
+	
 }

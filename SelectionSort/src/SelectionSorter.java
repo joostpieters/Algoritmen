@@ -1,7 +1,7 @@
 /**
  * A class that sorts a given array with the selection sort Algorithm. This
- * class also provides a method to return the number of compares this algorithm
- * has made and a method to increase the number of comaperes by one.
+ * class also provides a method to return the number of compares and swaps this algorithm
+ * has made and a method to increase the number of swaps and compares by one.
  * 
  * 
  * @author Yanice Slegers
@@ -17,7 +17,10 @@ public class SelectionSorter {
 	 */
 	@SuppressWarnings("rawtypes")
 	private Comparable[] rij;
-
+	/**
+	 * Variable that contain the number of swaps this sorting algorithm makes.
+	 */
+	private int swaps;
 	/**
 	 * This class is initialized with a given array. The given array is the
 	 * array that needs to be sort.
@@ -53,6 +56,7 @@ public class SelectionSorter {
 	 */
 	@SuppressWarnings("rawtypes")
 	public void switchPlace(int a, int b) {
+		IncreaseSwaps();
 		Comparable temp = rij[a];
 		rij[a] = rij[b];
 		rij[b] = temp;
@@ -111,6 +115,18 @@ public class SelectionSorter {
 			System.out.print(rij[i] + " | ");
 		}
 		System.out.println();
+	}
+	/**
+	 * Return the number of swaps this array has made.
+	 */
+	public int getSwaps() {
+		return swaps;
+	}
+	/**
+	 * Increases the number of swaps by one.
+	 */
+	public void IncreaseSwaps() {
+		this.swaps++;
 	}
 
 }
