@@ -141,6 +141,7 @@ public class InsertionSorter {
 		}
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		Comparable[] e = {6,9,8,7,6,4,5,4,3,15,2,1};
 		InsertionSorter s = new InsertionSorter(e);
