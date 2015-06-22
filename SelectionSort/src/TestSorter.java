@@ -1,4 +1,5 @@
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 
@@ -7,6 +8,7 @@ public class TestSorter {
 	/**
 	 * The number of compares should be equal for every array with the same length.
 	 */
+	@SuppressWarnings("rawtypes")
 	@Test
 	public void test_numbCompares() {
 		// We create a "best case" array that is fully sorted.
@@ -21,6 +23,11 @@ public class TestSorter {
 		s2.sort();
 		//We check if the number of compares is good
 		assertTrue(s.getComparers() == s2.getComparers());
+		//The array needs to be sorted
+		assertTrue(s.isSorted());
+		assertTrue(s2.isSorted());
+		//THe value of the beginning of the array and the array are checked if their lower than the other values
+		assertTrue(s.isLess(0, 1));
 	}
 	
 }

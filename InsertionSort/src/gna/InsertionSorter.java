@@ -1,7 +1,5 @@
 package gna;
 
-import java.awt.color.CMMException;
-
 /**
  * A class that provides a method to sort a given array with the insertion sort algorithm.
  * The class provides also a method to calculate the number of swaps and the number of compares 
@@ -25,6 +23,7 @@ public class InsertionSorter {
 	 */
 	@SuppressWarnings("rawtypes")
 	private Comparable[] rij;
+	@SuppressWarnings("rawtypes")
 	public InsertionSorter(Comparable[] array) {
 		this.rij = array;
 	}
@@ -129,6 +128,7 @@ public class InsertionSorter {
 	 * Sorts the array of this class with the insertion sort algorithm.
 	 */
 	public void sort(){
+		//We start with the second element so we can compare it with the first element.
 		for(int i = 1; i < rij.length; i++){
 			int j = i;
 			int ind = i;
@@ -141,6 +141,7 @@ public class InsertionSorter {
 		}
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		Comparable[] e = {6,9,8,7,6,4,5,4,3,15,2,1};
 		InsertionSorter s = new InsertionSorter(e);
