@@ -107,14 +107,16 @@ public class BubbleSorter {
 	}
 
 	public void sort() {
+		showArray();
 		for(int j = row.length; j > 0; j--){
 			for(int i = 0; i < j-1; i++){
-				showArray();
 				increaseCompares();
 				if(!isLess(i, i+1)){
 					switchPlace(i, i+1);
+					showArray();
 				}
 			}
+			System.out.println();
 		}
 
 	}
